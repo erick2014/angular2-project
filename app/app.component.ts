@@ -4,3 +4,9 @@ import {Component} from '@angular2/core'
 	selector:'my-app',
 	template:''
 })
+
+export class AppComponent{
+	constructor(){
+		
+	}
+}
