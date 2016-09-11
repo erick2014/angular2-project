@@ -2,7 +2,7 @@ import {Component} from '@angular2/core'
 
 @Component({
 	selector:'my-app',
-		template:`
+	template:`
 		<h4>Todos List</h4>
 	  <h5>Number of Todos:<span class="badge">{{todos.length}}</span></h5>
 	  <ul class="list-group">
