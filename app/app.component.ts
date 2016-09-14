@@ -1,6 +1,6 @@
-import {Component} from '@angular2/core'
+import {Component} from '@angular/core'
 
-@Component({
+@Component	({
 	selector:'my-app',
 	template:`
 		<h4>Todos List</h4>
@@ -21,6 +21,7 @@ export class AppComponent{
 		this.todos=["Todo 1","Todo 2","Todo 3"]
 	}
 	addTodo(todo:string){
+		console.log("adding a todo",todo)
 		this.todos.push(todo);
 	}
 }

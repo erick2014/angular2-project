@@ -37,14 +37,13 @@
 		packages['@angular/'+pkgName] = { main: 'bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
 	}
 
-	les
-		var setPackageConfig = System.packageWithIndex ? packIndex : packUmd; 
-		// Add package entries for angular packages ngPackageNames.forEach(setPackageConfig);
-		ngPackageNames.forEach(setPackageConfig);
-		var config = { 
-			map: map,
-			packages: packages 
-		};
-		System.config(config);
+	var setPackageConfig = System.packageWithIndex ? packIndex : packUmd; 
+	// Add package entries for angular packages ngPackageNames.forEach(setPackageConfig);
+	ngPackageNames.forEach(setPackageConfig);
+	var config = { 
+		map: map,
+		packages: packages 
+	};
+	System.config(config);
 
 })(this);
