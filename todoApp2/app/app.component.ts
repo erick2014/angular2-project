@@ -7,6 +7,7 @@ import {Todo} from './todos/shared/todo.model';
 		<h4>Todos List</h4>
 		<h5>Number of Todos: <span class="badge">{{todos.length}}</span></h5>
 		<todos-list [todos]="todos"></todos-list>
+		<add-todo [todos]="todos"></add-todo>
 	`
 })
 

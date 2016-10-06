@@ -1,0 +1,44 @@
+import {Component} from '@angular/core';
+import {Todo} from './shared/todo.model';
+
+@Component({
+	selector: 'add-todo',
+	inputs:		['todos'],
+	template: `
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title"><span class="glyphicon glyphicon-plus-sign"></span>Add New Todo</h3>
+			</div>
+
+			<div class="panel-body">
+
+				<div class="form-group">
+					<label for="titleInput">Title:</label>
+					<input id="titleInput" class="form-control" placeholder="Title" #title />
+				</div>
+
+				<div class="form-group">
+					<label for="descriptionInput">description:</label>
+					<input id="descriptionInput" class="form-control" placeholder="Description" #description />
+				</div>
+
+				<div class="form-group">
+					<label for="responsibleInput">responsible:</label>
+					<input id="responsibleInput" class="form-control" placeholder="Responsible" #responsible />
+				</div>
+
+			</div>
+			<div>
+				<button class="btn btn-default" (click)="addTodo(title.value,description.value,responsible.value)">Add Todo</button>
+			</div>
+		</div>
+	`
+})
+
+export class AddTodo{
+	todos:Array<Todo>;
+	constructor(){}
+	addTodo(title:string,description:string,responsible:string){
+		this.todos.push(new Todo(title,description,responsible) );
+	}
+}

@@ -12,14 +12,15 @@ var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 var todo_item_component_1 = require('./todo-item.component');
 var todos_list_component_1 = require('./todos-list.component');
+var add_todo_component_1 = require('./add-todo.component');
 var TodosModule = (function () {
     function TodosModule() {
     }
     TodosModule = __decorate([
         core_1.NgModule({
             imports: [common_1.CommonModule],
-            declarations: [todo_item_component_1.TodoItem, todos_list_component_1.TodosList],
-            exports: [todos_list_component_1.TodosList]
+            declarations: [todo_item_component_1.TodoItem, todos_list_component_1.TodosList, add_todo_component_1.AddTodo],
+            exports: [todos_list_component_1.TodosList, add_todo_component_1.AddTodo]
         }), 
         __metadata('design:paramtypes', [])
     ], TodosModule);

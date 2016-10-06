@@ -7,7 +7,7 @@ import {Todo} from './shared/todo.model';
 	template:`
 		<ul class="list-group">
 			<div *ngFor="let todo of todos">
-				<li class="list-group-item"> <todo-item [todo]="todo"></todo-item> </li>
+				<li *ngIf="todo.completed==false" class="list-group-item"> <todo-item [todo]="todo"></todo-item> </li>
 			</div>
 		</ul>
 	`

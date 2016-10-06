@@ -12,11 +12,14 @@ var core_1 = require('@angular/core');
 var TodoItem = (function () {
     function TodoItem() {
     }
+    TodoItem.prototype.deleteTodo = function () {
+        this.todo.setToCompleted();
+    };
     TodoItem = __decorate([
         core_1.Component({
             selector: 'todo-item',
             inputs: ['todo'],
-            template: "\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-8\"> <strong>{{todo.title}}</strong> </div>\n\t\t\t<div class=\"col-md-4\" align=\"right\"> \n\t\t\t\t<span class=\"glyphicon glyphicon-user\"></span>{{todo.responsible}}\n\t\t\t</div>\n\t\t</div>\n\t\t<hr>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">{{todo.description}}</div>\n\t\t</div>\n\t\t<hr>\n\t\t<div align=\"right\" class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<button class=\"btn btn-danger btn-sm\">\n\t\t\t\t\t<span class=\"glyphicon glyphicon-trash\"></span>Delete\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t</div>\n\t"
+            template: "\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-8\"> <strong>{{todo.title}}</strong> </div>\n\t\t\t<div class=\"col-md-4\" align=\"right\"> \n\t\t\t\t<span class=\"glyphicon glyphicon-user\"></span>{{todo.responsible}}\n\t\t\t</div>\n\t\t</div>\n\t\t<hr>\n\t\t<div class=\"row\">\n\t\t\t<div class=\"col-md-12\">{{todo.description}}</div>\n\t\t</div>\n\t\t<hr>\n\t\t<div align=\"right\" class=\"row\">\n\t\t\t<div class=\"col-md-12\">\n\t\t\t\t<button class=\"btn btn-danger btn-sm\" (click)=\"deleteTodo()\">\n\t\t\t\t\t<span class=\"glyphicon glyphicon-trash\"></span>Delete\n\t\t\t\t</button>\n\t\t\t</div>\n\t\t</div>\n\t"
         }), 
         __metadata('design:paramtypes', [])
     ], TodoItem);

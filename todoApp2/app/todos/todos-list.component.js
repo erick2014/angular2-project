@@ -16,7 +16,7 @@ var TodosList = (function () {
         core_1.Component({
             selector: 'todos-list',
             inputs: ['todos'],
-            template: "\n\t\t<ul class=\"list-group\">\n\t\t\t<div *ngFor=\"let todo of todos\">\n\t\t\t\t<li class=\"list-group-item\"> <todo-item [todo]=\"todo\"></todo-item> </li>\n\t\t\t</div>\n\t\t</ul>\n\t"
+            template: "\n\t\t<ul class=\"list-group\">\n\t\t\t<div *ngFor=\"let todo of todos\">\n\t\t\t\t<li *ngIf=\"todo.completed==false\" class=\"list-group-item\"> <todo-item [todo]=\"todo\"></todo-item> </li>\n\t\t\t</div>\n\t\t</ul>\n\t"
         }), 
         __metadata('design:paramtypes', [])
     ], TodosList);

@@ -18,7 +18,7 @@ import {Todo} from './shared/todo.model';
 		<hr>
 		<div align="right" class="row">
 			<div class="col-md-12">
-				<button class="btn btn-danger btn-sm">
+				<button class="btn btn-danger btn-sm" (click)="deleteTodo()">
 					<span class="glyphicon glyphicon-trash"></span>Delete
 				</button>
 			</div>
@@ -30,4 +30,7 @@ export class TodoItem{
 	constructor(){
 
 	}	
+	deleteTodo(){
+		this.todo.setToCompleted();
+	}
 }

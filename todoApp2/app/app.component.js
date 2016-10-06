@@ -21,7 +21,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n\t\t<h4>Todos List</h4>\n\t\t<h5>Number of Todos: <span class=\"badge\">{{todos.length}}</span></h5>\n\t\t<todos-list [todos]=\"todos\"></todos-list>\n\t"
+            template: "\n\t\t<h4>Todos List</h4>\n\t\t<h5>Number of Todos: <span class=\"badge\">{{todos.length}}</span></h5>\n\t\t<todos-list [todos]=\"todos\"></todos-list>\n\t\t<add-todo [todos]=\"todos\"></add-todo>\n\t"
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
