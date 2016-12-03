@@ -9,17 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var common_1 = require('@angular/common');
+var my_ng_style_comp_component_1 = require('./my-ng-style-comp.component');
+var myNgStyleMod = (function () {
+    function myNgStyleMod() {
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n\t\t<h1>Ng Style demo</h1>\n\t\t<my-ng-style-comp></my-ng-style-comp>\n\t"
+    myNgStyleMod = __decorate([
+        core_1.NgModule({
+            imports: [common_1.CommonModule],
+            declarations: [my_ng_style_comp_component_1.myNgStyleComp],
+            exports: [my_ng_style_comp_component_1.myNgStyleComp]
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], myNgStyleMod);
+    return myNgStyleMod;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.myNgStyleMod = myNgStyleMod;
+//# sourceMappingURL=my-ng-style-mod.module.js.map

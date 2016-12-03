@@ -11,13 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
+var my_ng_style_mod_module_1 = require('./ngStyleComp/my-ng-style-mod.module');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             declarations: [app_component_1.AppComponent],
-            imports: [platform_browser_1.BrowserModule],
+            imports: [platform_browser_1.BrowserModule, my_ng_style_mod_module_1.myNgStyleMod],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
