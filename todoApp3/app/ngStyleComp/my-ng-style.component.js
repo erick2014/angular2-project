@@ -30,4 +30,4 @@ var myNgStyleComp = (function () {
     return myNgStyleComp;
 }());
 exports.myNgStyleComp = myNgStyleComp;
-//# sourceMappingURL=my-ng-style-comp.component.js.map
+//# sourceMappingURL=my-ng-style.component.js.map
