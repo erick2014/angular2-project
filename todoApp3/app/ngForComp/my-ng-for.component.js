@@ -8,18 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var core_1 = require("@angular/core");
+var myNgForComp = (function () {
+    function myNgForComp() {
+        this.numbers = [1, 2, 3, 4, 5];
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n\t\t<h1>Ng Style demo</h1>\n\t\t<my-ng-style-comp></my-ng-style-comp>\n\t\t<my-ng-for></my-ng-for>\n\t"
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    return myNgForComp;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+myNgForComp = __decorate([
+    core_1.Component({
+        selector: 'my-ng-for',
+        template: "<div>\n\t\t<ul>\n\t\t\t<li *ngFor=\"let item of numbers\">item:{{item}}</li>\n\t\t</ul>\n\t</div>"
+    }),
+    __metadata("design:paramtypes", [])
+], myNgForComp);
+exports.myNgForComp = myNgForComp;
+//# sourceMappingURL=my-ng-for.component.js.map
