@@ -8,23 +8,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var my_ng_style_mod_module_1 = require('./ngStyleComp/my-ng-style-mod.module');
-var my_ng_for_module_1 = require('./ngForComp/my-ng-for.module');
+var core_1 = require("@angular/core");
+var platform_browser_1 = require("@angular/platform-browser");
+var app_component_1 = require("./app.component");
+var my_ng_style_component_1 = require("./ngStyleComp/my-ng-style.component");
+var my_ng_for_component_1 = require("./ngForComp/my-ng-for.component");
 var AppModule = (function () {
     function AppModule() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            declarations: [app_component_1.AppComponent],
-            imports: [platform_browser_1.BrowserModule, my_ng_style_mod_module_1.myNgStyleMod, my_ng_for_module_1.myNgForMod],
-            bootstrap: [app_component_1.AppComponent]
-        }), 
-        __metadata('design:paramtypes', [])
-    ], AppModule);
     return AppModule;
 }());
+AppModule = __decorate([
+    core_1.NgModule({
+        declarations: [app_component_1.AppComponent, my_ng_for_component_1.myNgForComp, my_ng_style_component_1.myNgStyleComp],
+        imports: [platform_browser_1.BrowserModule],
+        bootstrap: [app_component_1.AppComponent]
+    }),
+    __metadata("design:paramtypes", [])
+], AppModule);
 exports.AppModule = AppModule;
 //# sourceMappingURL=app.module.js.map

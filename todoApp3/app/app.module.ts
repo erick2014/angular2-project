@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
-import { myNgStyleMod } from './ngStyleComp/my-ng-style-mod.module';
-import { myNgForMod } from './ngForComp/my-ng-for.module';
+import { myNgStyleComp } from './ngStyleComp/my-ng-style.component';
+import { myNgForComp } from './ngForComp/my-ng-for.component';
 
 @NgModule({
-	declarations:[AppComponent],
-	imports:[BrowserModule,myNgStyleMod,myNgForMod],
+	declarations:[AppComponent,myNgForComp,myNgStyleComp],
+	imports:[BrowserModule],
 	bootstrap:[AppComponent]
 })
 
