@@ -6,7 +6,8 @@ import {Component} from '@angular/core';
 		<div class="panel panel-primary">
 			<div class="panel-heading">Angular 2 Event Binding Demo - Start typing here</div>
 			<div class="panel-body">
-				<div><input (keyup)="onKey($event)" /></div>
+				<div>Press any key here<input (keyup)="onKey($event)" /></div>
+				<div>Trigger event when hit enter <input #a (keyup.enter)="onKeyEnter(a.value)" /></div>
 				<hr/>
 				<div>
 					<h5>Resulting keyup events: <button class="btn btn-sm btn-primary pull-right" (click)="reset()">Reset</button> </h5>
@@ -51,6 +52,9 @@ export class KeyUpComponent{
 	}
 	onKey(event:KeyboardEvent){
 		this.keyUpEvents.push(event);
+	}
+	onKeyEnter(value){
+		console.log("input value when hit enter",value)
 	}
 	reset(){
 		this.keyUpEvents=[];
