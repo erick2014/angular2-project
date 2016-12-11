@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { KeyUpComponent } from './app.component';
+import { lifeCycleComponent } from './app.component';
 
 @NgModule({
-	declarations:[KeyUpComponent],
+	declarations:[lifeCycleComponent],
 	imports:[BrowserModule],
-	bootstrap:[KeyUpComponent]
+	bootstrap:[lifeCycleComponent]
 })
 
 export class AppModule{}
