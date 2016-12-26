@@ -1,0 +1,36 @@
+<hr/>
+<h2>Car Form</h2>
+<div class="alert alert-danger" role="alert">
+  {{diagnostic}}
+</div>
+<form>
+  <div class="form-group">
+    <label for="brand">Brand</label>
+    <input type="text" id="brand" type="text" class="form-control" [(ngModel)]="model.brand" required name="brand">
+  </div>
+  <div class="form-group">
+    <label for="model">Model</label>
+    <input type="text" id="model" class="form-control" [(ngModel)]="model.model" required name="model">
+  </div>
+  <div class="form-group">
+    <label for="model">Fuel Type</label>
+    <select id="fuelType" class="form-control" [(ngModel)]="model.fuelType" name="fuelType">
+      <option *ngFor="let ft of fuelTypes" [value]="ft">{{ft}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="bodyStyle">Body Style</label>
+    <select id="bodyStyle" class="form-control" [(ngModel)]="model.bodyStyle" name="bodyStyle">
+      <option *ngFor="let bs of bodyStyles" [value]="bs">{{bs}}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="bodyStyle">Top Speed (mph)</label>
+    <input type="text" id="topSpeed" class="form-control" [(ngModel)]="model.topSpeed" name="topSpeed">
+  </div>
+  <div class="form-group">
+    <label for="power">Power (HP)</label>
+    <input type="text" id="power" class="form-control" [(ngModel)]="model.power" name="power">
+  </div>
+</form>
+<hr/>
